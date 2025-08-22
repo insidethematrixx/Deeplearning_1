@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs and caches
+logs/
+*.log
+*.cache/
+
+# Torch/weights and artifacts
+*.pth
+*.pt
+
+# Figures and arrays
+*.png
+*.npz
+*.npy
+
+# Large datasets (avoid pushing binaries)
+dataset_train/
+dataset_val/
+
+# System files
+Thumbs.db 
