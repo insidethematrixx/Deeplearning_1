@@ -58,13 +58,15 @@ python train.py
 ```
 产物：`ant_bee_classifier.pth`
 
+(
 - 训练优化模型并评估（含最优模型保存、早停与曲线绘制）：
 ```bash
 python train_optimized.py
 ```
 产物：`best_ant_bee_classifier.pth`, `training_curves.png`
+)
 
-- 可视化两轮训练对比与详细分析：
+- 训练结果可视化与详细分析：
 ```bash
 python visualize_training.py
 ```
@@ -85,8 +87,7 @@ python visualize_training.py
   - 依据示例统计绘制两轮训练对比与详细分析图；提供加载与评估工具函数。
 
 ### 结果参考
-- 基础模型：训练至 40 epochs 后可获得较高准确率（示例输出见脚本）。
-- 优化模型：在相同数据上获得更稳定与更高的验证表现，并输出曲线与最佳权重。
+- 基础模型SimpleCNN：训练至 40 epochs 后可获得较高准确率（示例输出见脚本），但此时对于较小样本量的测试集显示出过拟合特征。
 
 ### 致谢
 - 数据与任务灵感参考自经典的 “hymenoptera” 蚂蚁/蜜蜂分类示例。 
