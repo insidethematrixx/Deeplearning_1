@@ -3,10 +3,9 @@
 一个使用 PyTorch 从零实现的二分类项目，识别图片中的对象是“蚂蚁”还是“蜜蜂”。项目包含基础版训练脚本与优化版训练脚本，并提供可视化对比图与详细分析图。
 
 ### 功能特性
-- 简洁的 `SimpleCNN` 与更深的 `OptimizedCNN` 两套模型
-- 训练/验证数据增强、学习率调度、梯度裁剪、早停与最优模型保存
-- 训练曲线绘制与两轮训练对比可视化
-- 评估包括总体准确率与按类别准确率
+- 简洁的 `SimpleCNN` （与学习过程中未被使用的、优化后的 `OptimizedCNN` 两套模型）
+- 基础的训练/验证
+- 训练曲线绘制与可视化
 
 ### 技术栈
 - **Python** 3.9+
@@ -77,9 +76,11 @@ python visualize_training.py
 - `train.py`
   - `SimpleCNN` 三个卷积块 + 全连接分类器，默认 40 epochs 训练并保存权重。
   - `evaluate_model` 对合并后的训练集进行评估（示例用途）。
+(
 - `train_optimized.py`
   - `OptimizedCNN` 更深网络 + BN + Dropout + AdamW + ReduceLROnPlateau + 标签平滑 + 梯度裁剪 + 早停。
   - 自动划分训练/验证集并保存最佳模型，绘制训练曲线。
+）
 - `visualize_training.py`
   - 依据示例统计绘制两轮训练对比与详细分析图；提供加载与评估工具函数。
 
